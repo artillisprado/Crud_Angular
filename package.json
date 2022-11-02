@@ -85,5 +85,17 @@
       "@angular/core": ">=13.0.0",
       "@angular/compiler": ">=13.0.0"
     }
-  }
+  },
+  "description": "![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/material-dashboard-angular.gif)",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artillisprado/Crud_Angular.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/artillisprado/Crud_Angular/issues"
+  },
+  "homepage": "https://github.com/artillisprado/Crud_Angular#readme"
 }
