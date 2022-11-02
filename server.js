@@ -2,10 +2,12 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const cors =  require('cors');
 const mysql = require('mysql2');
+const { debugPort } = require('process');
 const app = express();
 
 app.use(cors());
 app.use(bodyparser.json());
+app.use(express.static(__dirname + '/dist'))
 
 // database connection
 
@@ -16,6 +18,8 @@ const db = mysql.createConnection({
     database:'startup',
     port:3306
 });
+
+console.log(db)
 
 // check database connection
 
@@ -180,6 +184,10 @@ app.delete('/programador/:id',(req,res)=>{
         )
     })
 })
+
+app.get('/*',(req,res) => {
+    res.sendFile(__dirname + '/dist/index.html');
+});
 
 app.listen(process.env.PORT || 3000,()=>{
     console.log("server running...");

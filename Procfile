@@ -1,1 +1,1 @@
-echo "web: node ./backend/index.js > Procfile
+web: npm start
